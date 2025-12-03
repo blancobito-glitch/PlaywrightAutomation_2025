@@ -27,5 +27,6 @@ for(let i=0; i<cars.length; i++){
         //extract number from the text
         let resultsArray = searchResults.split(' ')
         console.log('for cars ' + cars[i] + ': ', resultsArray[1])
+        //just for testing
     }//end of for loop
 })//end of test
