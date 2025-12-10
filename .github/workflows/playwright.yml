@@ -4,6 +4,8 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+  schedule:
+    - cron: "*/2 * * * *"   # Runs every 2 minutes
 jobs:
   test:
     timeout-minutes: 60
@@ -17,8 +19,8 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run All Of the Tests
-      run: npm run allTests
+    - name: Run Bing Search Reusable Test
+      run: npm run bingReusable
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
