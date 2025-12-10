@@ -20,4 +20,5 @@ let searchResult = await getText(page, '[class="sb_count"]', 'Search Result Text
 console.log('Search Results: ' + searchResult);
 let searchNumber = searchResult.split(' ');
 console.log('Search number is: ' + searchNumber[1]);
+//expect(searchNumber[1] > 1000000);
 })  //end of test
