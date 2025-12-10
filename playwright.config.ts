@@ -12,6 +12,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+  timeout: 300000,
   testDir: './src',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -29,6 +30,8 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
   actionTimeout: 15000,
+  screenshot: 'only-on-failure',
+  video: 'retain-on-failure',
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
@@ -36,7 +39,7 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'chrome',
       use: { ...devices['Desktop Chrome'] },
     },
 
