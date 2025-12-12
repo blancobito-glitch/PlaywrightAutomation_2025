@@ -5,6 +5,7 @@ import { click, clickByIndex, selectByText, type } from '../Reusable_Actions';
 test('Assignment 2B Northwestern mutual @ai', async ({page}) => {
     //navigate to northwestern mutual
     await page.goto('https://www.northwesternmutual.com')
+    await page.waitForTimeout(3000)//wait for 3 seconds
     //click on insurance
     await click(page, '[id="nmx-nav-link-primary-insurance"]', 'Insurance menu')
     //click on get insurance 
