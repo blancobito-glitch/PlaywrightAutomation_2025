@@ -7,7 +7,7 @@ test('Assignment 2B Northwestern mutual @ai', async ({page}) => {
     await page.goto('https://www.northwesternmutual.com')
     await page.waitForTimeout(3000)//wait for 3 seconds
     //click on insurance
-    await click(page, '[id="nmx-nav-link-primary-insurance"]', 'Insurance menu')
+    await clickByIndex(page, '[class="nmx-nav-link nmx-nav-link-primary"]', 2, 'Insurance menu')
     //click on get insurance 
     await click(page, '[id="insurance-hero-cta-primary"]', 'Get Insurance link')
     //click on buy home insurance
