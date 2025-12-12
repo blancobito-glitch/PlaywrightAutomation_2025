@@ -9,6 +9,8 @@ test('Assignment 2B Northwestern mutual @ai', async ({page}) => {
     //click on insurance
     await clickByIndex(page, '[class="nmx-nav-link-container nmx-nav-link-primary-container"]', 2, 'Insurance link')
     await page.waitForTimeout(3000)//wait for 3 seconds
+    //click on get insurance
+    await click(page, '[class="sc-iBPTik rfmKR sc-iMeepW iWlCQx hero-link-cta-primary"]', 'Get Insurance button')
     //click on buy home insurance
     await click(page, '[id="fafa-interactive-flow-goal-card-buy-a-home"]', 'Buy Home Insurance link')
     await page.waitForTimeout(3000)//wait for 3 seconds
