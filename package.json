@@ -16,7 +16,7 @@
     "allTests":"npx playwright test test/test/* --workers=1 --project=chrome --reporter=html",
     "uspsTest22":"npx playwright test test/test/ActionItems/Assignment_2A.spec.ts --workers=1 --headed --project=chrome --reporter=html",
     "northwesternTest23":"npx playwright test test/test/ActionItems/Assignment_2B.spec.ts --workers=1 --headed --project=chrome --reporter=html",
-    "bothTests":"npx playwright test --grep @ai --workers=2 --project=chrome --reporter=html"
+    "bothTests":"npx playwright test --grep @ai --workers=1 --project=chrome --reporter=html"
     
   
   },
